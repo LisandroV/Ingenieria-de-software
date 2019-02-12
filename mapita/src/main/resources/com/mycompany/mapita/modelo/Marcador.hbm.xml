@@ -1,28 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 8/02/2019 02:10:16 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated 12/02/2019 02:37:32 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="com.mycompany.mapita.modelo.Marcador" table="marcador" schema="public" optimistic-lock="version">
-        <composite-id name="id" class="com.mycompany.mapita.modelo.MarcadorId">
-            <key-property name="idmarcador" type="int">
-                <column name="idmarcador" />
-            </key-property>
-            <key-property name="descripcion" type="string">
-                <column name="descripcion" />
-            </key-property>
-            <key-property name="longitud" type="double">
-                <column name="longitud" precision="17" scale="17" />
-            </key-property>
-            <key-property name="latitud" type="double">
-                <column name="latitud" precision="17" scale="17" />
-            </key-property>
-            <key-property name="usuarioid" type="int">
-                <column name="usuarioid" />
-            </key-property>
-        </composite-id>
-        <many-to-one name="usuario" class="com.mycompany.mapita.modelo.Usuario" update="false" insert="false" fetch="select">
+    <class name="com.mycompany.mapita.modelo.Marcador" table="marcador" optimistic-lock="version">
+        <id name="idmarcador" type="int">
+            <column name="idmarcador" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" not-null="true" />
+        </property>
+        <property name="longitud" type="double">
+            <column name="longitud" precision="17" scale="17" not-null="true" />
+        </property>
+        <property name="latitud" type="double">
+            <column name="latitud" precision="17" scale="17" not-null="true" />
+        </property>
+        <property name="usuarioid" type="int">
             <column name="usuarioid" not-null="true" />
-        </many-to-one>
+        </property>
     </class>
 </hibernate-mapping>

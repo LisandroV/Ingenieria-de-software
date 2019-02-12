@@ -1,5 +1,5 @@
 package com.mycompany.mapita.modelo;
-// Generated 8/02/2019 02:10:16 PM by Hibernate Tools 4.3.1
+// Generated 12/02/2019 02:37:32 PM by Hibernate Tools 4.3.1
 
 
 
@@ -9,30 +9,57 @@ package com.mycompany.mapita.modelo;
 public class Marcador  implements java.io.Serializable {
 
 
-     private MarcadorId id;
-     private Usuario usuario;
+     private int idmarcador;
+     private String descripcion;
+     private double longitud;
+     private double latitud;
+     private int usuarioid;
 
     public Marcador() {
     }
 
-    public Marcador(MarcadorId id, Usuario usuario) {
-       this.id = id;
-       this.usuario = usuario;
+    public Marcador(int idmarcador, String descripcion, double longitud, double latitud, int usuarioid) {
+       this.idmarcador = idmarcador;
+       this.descripcion = descripcion;
+       this.longitud = longitud;
+       this.latitud = latitud;
+       this.usuarioid = usuarioid;
     }
    
-    public MarcadorId getId() {
-        return this.id;
+    public int getIdmarcador() {
+        return this.idmarcador;
     }
     
-    public void setId(MarcadorId id) {
-        this.id = id;
+    public void setIdmarcador(int idmarcador) {
+        this.idmarcador = idmarcador;
     }
-    public Usuario getUsuario() {
-        return this.usuario;
+    public String getDescripcion() {
+        return this.descripcion;
     }
     
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    public double getLongitud() {
+        return this.longitud;
+    }
+    
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
+    }
+    public double getLatitud() {
+        return this.latitud;
+    }
+    
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+    public int getUsuarioid() {
+        return this.usuarioid;
+    }
+    
+    public void setUsuarioid(int usuarioid) {
+        this.usuarioid = usuarioid;
     }
 
 
