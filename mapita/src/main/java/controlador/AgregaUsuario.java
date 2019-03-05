@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package controlador;
 
 import com.mycompany.mapita.modelo.Usuario;
@@ -12,15 +11,11 @@ import java.util.Date;
 import javax.faces.bean.ManagedBean;
 
 /**
- * Hibernate Utility class with a convenient method to get Session Factory
- * object.
  *
- * @author n-droid
+ * @author Lisandro V.
  */
-
 @ManagedBean
 public class AgregaUsuario {
-
     private String nombre;
     private String correo;
     private String contrasenia;
@@ -66,5 +61,7 @@ public class AgregaUsuario {
         u.setFechanacimiento(fechanacimiento);
         UsuarioDAO udb = new UsuarioDAO();
         udb.save(u);
+
     }
+
 }
